@@ -6,6 +6,7 @@ Semantic Message Extraction for Text Based Data With Deep Neural Nets
 ## The Why
 - Traditional communication systems have focussed on improving the transmission rates through physical channels.more They are constrained by the Shannon Limit which defines the maximum data rate that can be achieved over a channel. While this theoretical limit has not been reached, the current systems are close and 6g communication research proposes alternate transmission methods.
 - Semantic communication is one such model which extracts the semantic message embedding from the original message, thus only necessiating the transfer of essential information and discarding the trivial. It follows logically then, that  this enables the transmission of more information. Current research in the field employs Deep Learning architectures to achieve this extraction of meaning. While this is relevant to different modalities of data, the focus of this project is text.  
+----------
 ## The How
 - Multiple architectures have been proposed in literature, from LSTMs to Transformers[1] and AutoEncoders[2]. The aim of the system is to obtain c = f(m) where "c" is the semantic message extracted from the original "m" and "f" is a deep learning model that facilitates this conversion. BLEU scores (sentence BLEU) are used as the performance metric. 
 #### The Data:
@@ -36,10 +37,10 @@ cd Ramayanam/src
 ```
 streamlit run Jignyasa.py
 ``` -->
-
+----------
 ## Outputs
 <!-- ![Streamlti Clud Deployment](https://github.com/su-mana-s/Ramayanam/assets/98222724/e6e291ff-090f-4a89-8a03-10004f516a4e) -->
-
+----------
 ## References
 [1] Huiqiang Xie et.al., ”Deep Learning Enabled Semantic Communication
 Systems,”IEEE Transactions on signal processing, vol 69, 2021.
