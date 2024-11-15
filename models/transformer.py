@@ -220,13 +220,35 @@ class Decoder(nn.Module):
             
         return x
         
+# class ChannelDecoder(nn.Module):
+#     def __init__(self, in_features, size1, size2):
+#         super(ChannelDecoder, self).__init__()
+        
+#         self.linear1 = nn.Linear(in_features, size1)
+#         self.linear2 = nn.Linear(size1, size2)
+#         self.linear3 = nn.Linear(size2, size1)
+#         # self.linear4 = nn.Linear(size1, d_model)
+        
+#         self.layernorm = nn.LayerNorm(size1, eps=1e-6)
+        
+#     def forward(self, x):
+#         x1 = self.linear1(x)
+#         x2 = F.relu(x1)
+#         x3 = self.linear2(x2)
+#         x4 = F.relu(x3)
+#         x5 = self.linear3(x4)
+        
+#         output = self.layernorm(x1 + x5)
+
+#         return output
+
 class Model(nn.Module): 
     def __init__(self, num_layers, src_vocab_size, trg_vocab_size, src_max_len, 
                  trg_max_len, d_model, num_heads, dff, dropout = 0.1):
         super(Model, self).__init__()
         
         self.encoder = Encoder(num_layers, src_vocab_size, src_max_len, 
-                               d_model, num_heads, dff, dropout) #transofrmer enc
+                               d_model, num_heads, dff, dropout) #transformer enc
         
         self.nn1 = nn.Sequential(nn.Linear(d_model, 256), # Dense enc
                                              #nn.ELU(inplace=True),
@@ -242,15 +264,26 @@ class Model(nn.Module):
                                d_model, num_heads, dff, dropout) #transformer dec
         
         
-        
         self.dense = nn.Linear(d_model, trg_vocab_size)
 
+        # self.channel_encoder = nn.Sequential(nn.Linear(d_model, 256), 
+        #                                      #nn.ELU(inplace=True),
+        #                                      nn.ReLU(inplace=True),
+        #                                      nn.Linear(256, 16))
+
+
+        # self.channel_decoder = ChannelDecoder(16, d_model, 512)
+
+
+"""
 #type 0 - transformer enc-dec only; 4 enc blocks
 #type 1 - transformer + dense
 #type 2 - transformer enc-dec ; 6 enc blocks
 # same loss fn - CE
 
 #type 3 - transformer + AE
+"""
+
 
 """
 type=0, model2 will give only 6 block transformer ie., sc
