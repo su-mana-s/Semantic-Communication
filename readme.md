@@ -4,13 +4,13 @@ Semantic Message Extraction for Text Based Data With Deep Neural Nets
 - It uses [Europarl: A Parallel Corpus for Statistical Machine Translation](https://www.statmt.org/europarl/) and is built with pyTorch.
 ----------
 ## The Why
-- Traditional communication systems have focussed on improving the transmission rates through physical channels.more They are constrained by the Shannon Limit which defines the maximum data rate that can be achieved over a channel. While this theoretical limit has not been reached, the current systems are close and 6g communication research proposes alternate transmission methods.
+- Traditional communication systems have focussed on improving the transmission rates through physical channels. They are constrained by the Shannon Limit which defines the maximum data rate that can be achieved over a channel. While this theoretical limit has not been reached, the current systems are close and 6g communication research proposes alternate transmission methods.
 - Semantic communication is one such model which extracts the semantic message embedding from the original message, thus only necessiating the transfer of essential information and discarding the trivial. It follows logically then, that  this enables the transmission of more information. Current research in the field employs Deep Learning architectures to achieve this extraction of meaning. While this is relevant to different modalities of data, the focus of this project is text.  
 ----------
 ## The How
 - Multiple architectures have been proposed in literature, from LSTMs to Transformers[1] and AutoEncoders[2]. The aim of the system is to obtain c = f(m) where "c" is the semantic message extracted from the original "m" and "f" is a deep learning model that facilitates this conversion. BLEU scores (sentence BLEU) are used as the performance metric. 
 #### The Data:
-[Europarl: A Parallel Corpus for Statistical Machine Translation](https://www.statmt.org/europarl/) offers sentence aligned text for machine translation. Single language data is sufficient for our purposes, since our aim here is to merely recreate the original message on the reciever's end. To this end, the english section of the "bg-en" dataset was used.
+[Europarl: A Parallel Corpus for Statistical Machine Translation](https://www.statmt.org/europarl/) offers sentence-aligned text for machine translation. Single-language data is sufficient for our purposes, since our aim here is to merely recreate the original message on the reciever's end. To this end, the English section of the "bg-en" dataset was used.
 
 #### The Project:
 1) Data Pre-Processing & Dataset creation 
