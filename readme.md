@@ -39,11 +39,17 @@ streamlit run Jignyasa.py
 ``` -->
 ----------
 ## Outputs
-<!-- ![Streamlti Clud Deployment](https://github.com/su-mana-s/Ramayanam/assets/98222724/e6e291ff-090f-4a89-8a03-10004f516a4e) -->
+- Training Epochs - 12
+- Testing Epochs - 2
+- Test cases - 25899
+1) BLEU scores <br><br>
+![BLEU-LR scores](https://github.com/user-attachments/assets/b7ce562c-c70b-47b1-af43-5c9ae435b7ac)
+
+3) Sentences  - After Semantic Extraction & Decoding <br><br>
+![image](https://github.com/user-attachments/assets/352f1126-20c5-4fbc-833e-d35e8dc57a80)
+
 ----------
 ## References
-[1] Huiqiang Xie et.al., ”Deep Learning Enabled Semantic Communication
-Systems,”IEEE Transactions on signal processing, vol 69, 2021.
+[1] Huiqiang Xie et.al., ”Deep Learning Enabled Semantic Communication Systems,”IEEE Transactions on signal processing, vol 69, 2021.
 
-[2] Xinlai Luo, “Autoencoder-based Semantic Communication Systems with
-Relay Channels,” arXiv:2111.10083v1 [cs.IT] 19 Nov 2021
+[2] Xinlai Luo, “Autoencoder-based Semantic Communication Systems with Relay Channels,” arXiv:2111.10083v1 [cs.IT] 19 Nov 2021
