@@ -266,14 +266,7 @@ class Model(nn.Module):
         
         self.dense = nn.Linear(d_model, trg_vocab_size)
 
-        # self.channel_encoder = nn.Sequential(nn.Linear(d_model, 256), 
-        #                                      #nn.ELU(inplace=True),
-        #                                      nn.ReLU(inplace=True),
-        #                                      nn.Linear(256, 16))
-
-
-        # self.channel_decoder = ChannelDecoder(16, d_model, 512)
-
+       
 
 """
 #type 0 - transformer enc-dec only; 4 enc blocks
